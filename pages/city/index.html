@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html id="app">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cities</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="Yakima Teng, cleveryun@163.com">
+  <link rel="shortcut icon" href="../../favicon.ico"/>
+  <noscript>您的浏览器不支持JavaScript或者JavaScript的运行被您禁止了。</noscript>
+  <link rel="stylesheet" href="../../css/normalize.min.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="./importer.min.css">
+</head>
+<body>
+<div class="container">
+  <ul class="ul">
+    <li v-for="(key, value) in allCities" @click="toggleHighlight($index)" class="card transition-fast">
+      <div class="inner transition">
+        <header class="header">
+          {{$index + '.' + key}}
+          <i class="fa fa-2x transition" :class="arrowDirections[$index]"></i>
+        </header>
+        <article class="transition-medium article">
+          <ul>
+            <li class="li" v-for="item in value">{{item}}</li>
+          </ul>
+        </article>
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/vue.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

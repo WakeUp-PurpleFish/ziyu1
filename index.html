@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产360浏览器默认采用高速模式渲染页面 -->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>liuziyu blog</title>
+    
+    <link rel="stylesheet" href="./css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/importer.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+    <div class="app-main-container">
+      <nav id="menuWrapper" class="app-menu-wrapper">
+        <div class="menu-toggle-wrapper">
+          <i id="btnToggleMenu" class="fa fa-list"></i>
+        </div>
+        <ul class="menus">
+
+
+
+
+          <li class="menu">
+            <i class="fa fa-glass"></i>
+            <span data-route-name="kongbai" class="title"><h2>主页面</h2></span>
+          </li>
+          
+
+          <!-- <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"  class="menu"><a href="#">欢迎回来</a>函数里面用id和this都代表了这个节点的意思 -->
+  <ui>
+          <li class="menu">
+            <i class="fa fa-glass"></i>
+            <span data-route-name="shouye" class="title">主页</span>
+          </li>
+
+          <li class="menu">
+            <i class="fa fa-glass"></i>
+            <span data-route-name="bolg"><a href="https://wakeup-purplefish.github.io/" class="title">我的博客</a></span>
+          </li>
+
+  </ui>
+</li>
+
+
+
+
+
+<li class="menu">
+  <i class="fa fa-file-image-o"></i>
+  <span data-route-name="kongbai" class="title"><h2>知识点</h2></span>
+</li>
+
+
+<!-- <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this);" ><a href="#"><i class="fa fa-file-image-o"></i>专业科目</a> -->
+  <ul>
+          <li class="menu">
+            <i class="fa fa-file-image-o"></i>
+            <span data-route-name="classtable" class="title">课程表</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-file-image-o"></i>
+            <span data-route-name="web" class="title">前端</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-file-image-o"></i>
+            <span data-route-name="mysql" class="title">数据库</span>
+          </li> 
+        <li class="menu">
+          <i class="fa fa-file-image-o"></i>
+          <span data-route-name="os" class="title">操作系统</span>
+        </li>
+        <li class="menu">
+          <i class="fa fa-file-image-o"></i>
+          <span data-route-name="internet" class="title">计算机网络</span>
+        </li>
+        <li class="menu">
+          <i class="fa fa-file-image-o"></i>
+          <span data-route-name="computer" class="title">计算机组成原理</span>
+        </li>
+
+        </ul>
+        </li>
+
+
+
+
+        <li class="menu">
+          <i class="fa fa-bell-o"></i>
+          <span data-route-name="kongbai" class="title"><h2>小彩蛋</h2></span>
+        </li>
+
+
+
+        <!-- <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"  class="menu"><i class="fa fa-bell-o">小彩蛋</i> -->
+          <ul>
+
+        <li class="menu">
+          <i class="fa fa-bell-o"></i>
+          <span data-route-name="solar" class="title">太阳系动态图</span>
+        </li>
+
+
+          <li class="menu">
+            <i class="fa fa-bell-o"></i>
+            <span data-route-name="rainbow" class="title">彩色条纹</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-bell-o"></i>
+            <span data-route-name="city" class="title">不重复的颜色</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-bell-o"></i>
+            <span data-route-name="particles" class="title">粒子效果</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-bell-o"></i>
+            <span data-route-name="guess" class="title">猜字母游戏</span>
+          </li>
+          <li class="menu">
+            <i class="fa fa-cog"></i>
+            <span data-route-name="upload" class="title">图片压缩上传</span>
+          </li>
+        </ul>
+        </li>
+        </ul>
+      </nav>
+      <article class="app-iframe-wrapper">
+        <iframe id="appIframe" class="app-content-wrapper" src="" frameborder="0"></iframe>
+      </article>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/handlebars-v4.0.5.min.js"></script>
+    <script>
+      var $menuWrapper = $('#menuWrapper')
+      var $appIframe = $('#appIframe')
+      var $menusWrapper = $('#menuWrapper .menus')
+      var $menus = $('#menuWrapper .menu')
+      var $btnToggleMenu = $('#btnToggleMenu')
+
+      // 自定义路由
+      var routesConfig = {
+        shouye:'./shouye.html',
+        blog:'https://wakeup-purplefish.github.io/',// 未用到直接跳出去
+        classtable:'./classtable.html',
+        web:'./web.html',
+        mysql:'./mysql.html',
+        os:'./os.html',
+        internet:'./internet.html',
+        computer:'./computer.html',
+        solar:'./solar.html',
+
+        rainbow: './pages/rainbow/index.html',
+        city: './pages/city/index.html',
+        guess: './pages/guess/index.html',
+        particles: './pages/particles/index.html',
+        upload: './pages/upload/index.html'
+      }
+      function Route (routesConfig) {
+        this.routers = routesConfig
+      }
+      Route.prototype.go = function (options) {
+        var routeName = options.path
+        window.location.hash = '#' + routeName
+
+        var targetUrl = this.routers[routeName]
+        $appIframe.prop('src', targetUrl)
+
+        $menus.removeClass('active')
+        $menus.find('span[data-route-name=' + routeName + ']').parents('.menu').addClass('active')
+      }
+      var router = new Route(routesConfig)
+
+      $menuWrapper.on('click', '.menu', function (e) {
+        var $this = $(this)
+        var routeName = $this.find('.title').data('route-name')
+        router.go({ path: routeName })
+      })
+
+      $btnToggleMenu.click(function () {
+        $menusWrapper.toggleClass('show')
+      })
+
+      window.addEventListener('load', function () {
+        var hash = window.location.hash.replace('#', '')
+        if (Object.keys(routesConfig).indexOf(hash) === -1) {
+          router.go({ path: 'shouye' })
+        } else {
+          router.go({ path: hash })
+        }
+      }, false)
+
+
+
+//       function showsub(li){
+// 	var submenu=li.getElementsByTagName("ul")[0];
+// 	submenu.style.display="block";
+// }
+// function hidesub(li){
+// 	var submenu=li.getElementsByTagName("ul")[0];
+// 	submenu.style.display="none";
+
+  // }
+    </script>
+
+
+
+  </body>
+</html>

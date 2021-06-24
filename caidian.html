@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>站长天空-网页特效-导航菜单-符合web标准二级下拉导航菜单</title>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<!--把下面代码加到<head>与</head>之间-->
+<style type="text/css">
+*{
+padding:0;
+margin:0;
+}
+body{
+font-family:verdana,sans-serif;
+font-size:small;
+}
+#navigation,#navigation li ul{
+list-style-type:none;
+}
+#navigation{
+margin:40px;
+}/*可有可无属性，是内容与边的距离*/
+#navigation li{
+float:left;
+text-align:center;
+position:relative;/*position:relative一定要写，是下面的链接相对它绝对定位*/
+}
+#navigation li a:link,#navigation li a:visited{
+display:block;
+text-decoration:none;
+color:#000;
+width:120px;/*改变所有的导航栏的长度*/
+height:30px;/*改变所有导航栏的高度*/
+line-height:30px;
+border:1px solid red;/*没有这个属性的所有的导航栏的颜色就连在一起了*/
+background:#c5dbf2;
+padding-left:10px;
+}
+#navigation li ul{
+display:none;
+position:absolut;
+top:40px;
+left:0;
+margin-top:1px;/*可有可无，无的话主菜单和二级菜单就会没有空隙*/
+width:120px;
+}
+#h{
+position:absolute;
+top:74px;
+left:40px;   
+} 
+</style>
+<script type="text/javascript">
+function displaySubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0];
+subMenu.style.display = "block";
+}
+function hideSubMenu(li) {
+var subMenu = li.getElementsByTagName("ul")[0];
+subMenu.style.display = "none";
+}
+</script>
+</head>
+<body>
+<!--把下面代码加到<body>与</body>之间-->
+<div>
+  <ul id="navigation">
+    <li onmouseover="displaySubMenu(li1)" onmouseout="hideSubMenu(this)" id="li1"><a href="#">栏目1</a><!--函数里面用id和this都代表了这个节点的意思-->
+      <ul>
+        <li><a href="#">栏目1->菜单1</a></li>
+        <li><a href="#">栏目1->菜单2</a></li>
+        <li><a href="#">栏目1->菜单3</a></li>
+      </ul>
+    </li>
+    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">栏目2</a>
+      <ul>
+        <li><a href="#">栏目2->菜单1</a></li>
+        <li><a href="#">栏目2->菜单2</a></li>
+        <li><a href="#">栏目2->菜单3</a></li>
+      </ul>
+    </li>
+    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">栏目3</a>
+      <ul>
+        <li><a href="#">栏目3->菜单1</a></li>
+        <li><a href="#">栏目3->菜单2</a></li>
+        <li><a href="#">栏目3->菜单3</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

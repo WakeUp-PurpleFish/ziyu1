@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>操作系统</title>
+     <style type = "text/css"> @import "./css/dock.css"</style>
+     <style>
+  .body{
+      
+            background-color: #d3e0f2;
+             /* background-image:url("./img/beijing1.jpg"); */
+            background-size: cover;
+         }
+   .self{
+         height:2000px;
+         position: absolute;
+         margin: auto;
+         left: 0;
+         right: 0;
+         background-color:white;
+            /* background-color:rgba(247,238,238,0.93);*/
+             filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;
+         width: 967px;
+             border-radius: 2%;
+
+     }
+    .eaasy{
+        width:900px;
+        height: 200px;
+        position: absolute;
+         margin: auto;
+         left: 0;
+         right: 0;
+         background-color:white;
+         border-radius: 3%;
+         }
+         .clear{
+             clear:both;
+         }
+    </style>
+</head>
+
+<body  class="body">
+    <div class="self"><h2 style="text-align: center">操作系统</h2>
+    <p style="text-align: right;font-family: 楷体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br><br><br>
+</p></div><br><br><br><br><br><br>
+     <div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271')" style="text-align: center"><h2>线程和进程</h2><p style="text-align: left;font-family: 楷体"> 
+        线程与进程的比较 ①调度 线程是独立调度的基本单位，在同一进程中，线程的切换不会引起进程切换，从一个进程中的线程切换到另一个进程中的线程时，会引起进程切换。 ②并发性 不仅进程之间可以并发执行，而且在一个进程中的多个线程之间亦可并发执行。 
+        ③拥有资源 进程都可以拥有资源，是系统中拥有资源的一个基本单位。一般而言，线程自己不拥有系统资源(也有一点必不可少的资源)，但它可以访问其隶属进程的资源。 
+        ④系统开销 由于创建或撤销进程时，系统都要为之分配或回收资源，如内存空间、I/O 设备等，所付出的开销远大于创建或撤销线程时的开销。类似地，在进行进程切换时，涉及当前执行进程 CPU 环境的保存及新调度进程 CPU 环境的设置，而线程切换时只需保存和设置少量寄存器内容，开销很小。    </p></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271')" style="text-align: center"><h2>虚拟储存器</h2><p style="text-align: left;font-family: 楷体">
+        虚拟存储器是指具有请求调入功能和置换功能，能从逻辑上对内存容量加以扩充的一种存储器系统。其逻辑容量由内存容量和外存容量之和所决定，其运行速度接近于内存速度，而每位的成本却又接近于外存。 
+        虚拟存储器的特征 
+        ①多次性 多次性是指一个作业被分成多次调入内存运行，亦即在作业运行时没有必要将其全部装入，只需将当前要运行的那部分程序和数据装入内存即可；以后每当要运行到尚未调入的那部分程序时，再将它调入。 
+        ②对换性 对换性是指允许在作业的运行过程中进行换进、换出，亦即，在进程运行期间，允许将那些暂不使用的程序和数据，从内存调至外存的对换区(换出)，待以后需要时再将它们从外存调至内存(换进)；
+        ③虚拟性 虚拟性是指能够从逻辑上扩充内存容量，使用户所看到的内存容量远大于实际内存容量。实现小内存运行大作业，改善内存利用率，提高并发程度，增加系统吞吐量。
+
+
+
+
+</p></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271')" style="text-align: center"><h2>I/O通道</h2><p style="text-align: left;font-family: 楷体">
+        I/O通道处于CPU和设备控制器之间，是一种特殊的处理机，它具有执行I/O指令的能力，并通过执行通道(I/O)程序来控制I/O操作。指令类型单一、通道与CPU共享内存。
+        通道类型
+        ①字节多路通道
+        按字节交叉方式工作的通道。
+        ②数组选择通道
+        按数组方式进行数据传送，
+        ③数组多路通道
+        将数组选择通道传输速率高和字节多路通道能使各子通道(设备)分时并行操作的优点相结合而形成的一种新通道。数据传送是按数组方式进行的。
+
+
+    </p></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271/article/details/104116066?spm=1001.2014.3001.5501')" style="text-align: center"><h2>To be continued</h2><p style="text-align: left;font-family: 楷体">
+</p></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271/article/details/104116066?spm=1001.2014.3001.5501')" style="text-align: center"><h2>To be continued</h2><p style="text-align: left;font-family: 楷体">
+</p></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="eaasy" onclick="window.open('https://blog.csdn.net/qq_44761271/article/details/104116066?spm=1001.2014.3001.5501')" style="text-align: center"><h2>To be continued</h2><p style="text-align: left;font-family: 楷体">
+</p></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+   
+<ul class="pagination modal-1">
+  <li><a href="#" class="prev">&laquo</a></li>
+  <li><a href="#" class="active">1</a></li>
+  <li> <a href="#">2</a></li>
+  <li> <a href="#">3</a></li>
+  <li> <a href="#">4</a></li>
+  <li> <a href="#">5</a></li>
+  <li> <a href="#">6</a></li>
+  <li> <a href="#">7</a></li>
+  <li> <a href="#">8</a></li>
+  <li> <a href="#">9</a></li>
+  <li><a href="#" class="next">&raquo;</a></li>
+</ul><br>
+    </div>
+    
+</body>
+</html>

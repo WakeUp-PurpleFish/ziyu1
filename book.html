@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学海无涯</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+ 
+/* 头部标题 */
+.header {
+  padding: 5px;
+  text-align: center;
+  background: white;
+}
+ 
+.header h1 {
+  font-size: 50px;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #4E6DB3;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+ 
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+ 
+/* 图像部分 */
+.fakeimg {
+  background-color: #D3E0F2;
+    padding:5px;
+  width: 100%;
+ height: 250px;
+}
+    .fakeimg1 {
+  background-color: #aaa;
+    padding:5px;
+  width: 100%;
+ height: auto;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ 
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+    .bookborder{
+        border:2px auto;
+    }
+</style>
+</head>
+<body>
+    <script type="text/javascript" src="./lib/me.js" ></script>
+<div class="header">
+  <h1>学海无涯</h1>
+  <p><strong>书、电影、漫画、社会热点感悟等</strong></p>
+</div>
+
+<div class="topnav">
+  <a href="#">文学</a>
+  <a href="#">音乐</a>
+  <a href="#">电影</a>
+  <a href="#">社会热点</a>
+  <a href="#" style="float:right">动漫</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>读的书</h2>
+      <h5>名著、小说</h5>
+      <div class="fakeimg" style="text-align: center">
+        <div>《三体》 刘慈欣 简介：是刘慈欣创作的系列长篇科幻小说，作品讲述了地球人类文明和三体文明的信息交流、生死搏杀及两个文明在宇宙中的兴衰历程。</div><br>
+        <div>《人间词话》 简介：《人间词话》是王国维所著的一部文学批评著作。该作是作者接受了西洋美学思想之洗礼后，以崭新的眼光对中国旧文学所作的评论。       </div><br>
+        <div>《鲁迅全集》 简介：《鲁迅全集》是一部由人民文学出版社、光明日报出版社等多家出版社出版的图书，作者是鲁迅。书中包括鲁迅著作、文章、书信等内容。 </div><br>
+        <div>《金庸全集》 简介：金庸全集是指金庸所创作的作品的合集。金庸曾把所创作的小说名称的首字联成一副对联：飞雪连天射白鹿，笑书神侠倚碧鸳，再加一部《越女剑》，共15部。      </div>
+        </div>
+      <p><strong>人是会思想的芦苇</strong></p>
+    
+    </div>
+    <div class="card">
+      <h2>电影</h2>
+      <h5>国内、国外</h5>
+      <div class="fakeimg" style="height:400px;text-align: center">
+        <div>《肖申克的救赎》    </div><br>
+        <div>《霸王别姬》        </div><br>
+        <div>《阿甘正传》        </div><br>
+        <div>《泰坦尼克号》        </div><br>
+        <div>《千与千寻》        </div><br>
+        <div>《鬼子来了》        </div><br>
+        <div>《让子弹飞》        </div><br>
+        <div>《无间道》        </div><br>
+      </div>
+      <p><strong>感悟颇深</strong></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>动漫</h2>
+         <h5>clannd</h5>
+         <div class="fakeimg1"><img src="./img/clannd.jpg" width="100%"height="100%"></div>
+      <p>另一种感动</p>
+    </div>
+    <div class="card">
+      <h3>社会热点</h3>
+        <h5><a href="http://sa.sogou.com/new-weball/page/sgs/epidemic?type_page=pcpop">新馆肺炎疫情实时监控</a></h5>
+      <div></div>
+        <p></p>
+    </div>
+    <div class="card">
+      <h2>备注：</h2>
+         <h5></h5>
+        <div> 考试！！！ </div>
+      <p>备考！！</p>
+      <div> 毕业 </div>
+    </div>
+  
+  </div>
+</div>
+
+<div class="footer">
+  <h2>生活的点点滴滴</h2>
+</div>
+
+</body>
+</html>
